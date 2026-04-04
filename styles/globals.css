@@ -45,3 +45,14 @@
 .animate-slide-out {
   animation: slideOut 300ms ease-out forwards;
 }
+
+.leaflet-popup-content {
+  width: auto !important;
+  margin: 0 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 0 !important;
+  border-radius: 0rem !important;
+  background: none !important;
+}

@@ -1,14 +1,28 @@
+'use client';
 import Image from 'next/image';
-import porData from '../data/por.json';
+import { useState, useEffect, Dispatch, SetStateAction } from 'react';
 
 interface POR {
   id: string;
   name: string;
-  position: string;
   image: string;
+  linkedin: string;
+  position: string;
 }
 
 const PORPage = () => {
+  const [porData, setPORData]: [POR[], Dispatch<SetStateAction<POR[]>>] =
+    useState([{
+      image: null
+    } as unknown as POR]);
+
+  useEffect(() => {
+    fetch('/database/por.json')
+      .then((res) => res.json())
+      .then(setPORData)
+      .catch(console.error);
+  }, []);
+
   return (
     <div className="pt-24 p-5 mx-auto">
       <h1 className="text-3xl font-bold text-center mb-8 dark:text-white text-black">
