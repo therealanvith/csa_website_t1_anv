@@ -6,7 +6,7 @@ export default function Footer(): JSX.Element {
     const footer = document.querySelector('footer');
     if (!footer) return;
 
-    footer.style = `top: ${document.body.clientHeight - footer.clientHeight}px;`;
+    footer.setAttribute('style', `top: ${document.body.clientHeight - footer.clientHeight}px;`);
   }, []);
 
   return (
