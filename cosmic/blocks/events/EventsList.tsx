@@ -42,27 +42,31 @@ function Events({ events }: { events: EventCardType[] }) {
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
       {modifiedEvents?.map((event: EventCardType, i) => {
         if (breakIndices.indexOf(i) !== -1) {
           if (i == 0 && !upcoming) return;
           return (
             <h3
               key={i}
-              className="text-4xl text-center mt-[50px] font-bold mb-6 col-span-1 lg:col-span-2 relative before:bg-gray-700 before:w-1/3 before:h-1 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:translate-x-1/4 before:rounded-full after:bg-gray-700 after:w-1/3 after:h-1 after:absolute after:right-0 after:top-1/2 after:-translate-y-1/2 after:-translate-x-1/4 after:rounded-full"
+              className="relative col-span-1 mb-6 mt-[50px] text-center text-4xl font-bold before:absolute before:left-0 before:top-1/2 before:h-1 before:w-1/3 before:-translate-y-1/2 before:translate-x-1/4 before:rounded-full before:bg-gray-700 before:opacity-0 after:absolute after:right-0 after:top-1/2 after:h-1 after:w-1/3 after:-translate-x-1/4 after:-translate-y-1/2 after:rounded-full after:bg-gray-700 after:opacity-0 lg:col-span-2 lg:before:opacity-100 lg:after:opacity-100"
             >
               {i == 0
                 ? 'Upcoming Events'
                 : `${getDataFromStringDate(
                     event.metadata.start_date
-                  ).getFullYear()}-${(getDataFromStringDate(
-                    event.metadata.start_date
-                  ).getFullYear() + 1) % 100}`}
+                  ).getFullYear()}-${
+                    (getDataFromStringDate(
+                      event.metadata.start_date
+                    ).getFullYear() +
+                      1) %
+                    100
+                  }`}
             </h3>
           );
         } else {
           return (
-            <div key={i} className="border border-[#3a3a3a] col-span-1">
+            <div key={i} className="col-span-1 border border-[#3a3a3a]">
               <EventCard event={event} key={event.slug} />
             </div>
           );
@@ -101,7 +105,7 @@ export async function EventsList({
   if (noWrap) return <Events events={events} />;
 
   return (
-    <div className={`w-full flex flex-col px-4 gap-8 ${className}`}>
+    <div className={`flex w-full flex-col gap-8 px-4 ${className}`}>
       <Events events={events} />
     </div>
   );

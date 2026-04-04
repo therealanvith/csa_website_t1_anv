@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'xs': '400px'
+        'xs': '400px',
+        'nav-cutoff': '910px'
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],

@@ -26,11 +26,13 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   //const [isBannerVisible, setIsBannerVisible] = useState(false);
 
-  {/*useEffect(() => {
+  {
+    /*useEffect(() => {
     if (window.location.href.endsWith('/events/atmos-25-workshops'))
       setIsBannerVisible(false);
     else setIsBannerVisible(true);
-  }, []);*/}
+  }, []);*/
+  }
 
   // Lock scrolling on both html and body when menu is open
   useEffect(() => {
@@ -62,16 +64,18 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
     }
   };
 
-  {/*const handleBannerClick = () => {
+  {
+    /*const handleBannerClick = () => {
     window.location.href = '/events/atmos-25-workshops';
-  };*/}
+  };*/
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full mx-auto bg-white/75 backdrop-blur-lg dark:bg-zinc-900/90">
       <div className="flex items-center justify-between px-4 py-3">
         <SiteLogo siteData={name} />
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden nav-cutoff:flex items-center space-x-6">
           <nav>
             <ul className="flex space-x-6">
               <li>
@@ -96,6 +100,22 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
                   className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
                 >
                   Events
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/opportunities"
+                  className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
+                >
+                  Opportunities
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
+                >
+                  About
                 </a>
               </li>
               <li>
@@ -132,23 +152,11 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
               </li>
             </ul>
           </nav>
-          <div className="pl-4 border-l border-gray-700">
-            {session ? (
-              <button
-                onClick={() => signOut()}
-                className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200 focus:outline-none"
-              >
-                {session.user?.email}
-              </button>
-            ) : (
-              <LoginButton />
-            )}
-          </div>
         </div>
 
         {/* Hamburger Menu Button (Mobile) */}
         <button
-          className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none"
+          className="nav-cutoff:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none"
           onClick={toggleMenu}
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen}
@@ -170,17 +178,6 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
           />
         </button>
       </div>
-      {/* banner for atmos 25'
-      {isBannerVisible && (
-        <div
-          className="sticky top-0 left-0 w-full bg-[#f4f4f4] dark:bg-[#1f2937] text-black dark:text-white text-center py-2 z-50 cursor-pointer hover:bg-[#eee] dark:hover:bg-gray-600 transition"
-          onClick={handleBannerClick}
-        >
-          <span className="text-sm md:text-base tracking-wide">
-            Click here to join us at ATMoS'25
-          </span>
-        </div>
-      )}*/}
 
       {/* Mobile Menu Portal */}
       {isMenuVisible && (
@@ -188,7 +185,7 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
           <div
             className={`fixed inset-0 bg-white/95 dark:bg-zinc-900/95 backdrop-blur-sm z-[1000] ${
               isMenuOpen ? 'animate-slide-in' : 'animate-slide-out'
-            } transition-opacity duration-300 md:hidden`}
+            } transition-opacity duration-300 nav-cutoff:hidden`}
           >
             <button
               className="absolute top-3 right-4 p-2"
@@ -239,6 +236,24 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
                       onClick={toggleMenu}
                     >
                       Events
+                    </a>
+                  </li>
+                  <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">
+                    <a
+                      href="/opportunities"
+                      className="block text-xl font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
+                      onClick={toggleMenu}
+                    >
+                      Opportunities
+                    </a>
+                  </li>
+                  <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">
+                    <a
+                      href="/about"
+                      className="block text-xl font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
+                      onClick={toggleMenu}
+                    >
+                      About
                     </a>
                   </li>
                   <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">

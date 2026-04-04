@@ -29,7 +29,7 @@ export default async function RootLayout({
   const siteData = await getGlobalData();
   return (
     <html lang="en" className={`${sans.variable} font-sans`}>
-      <body className="bg-white dark:bg-zinc-950">
+      <body className="bg-white dark:bg-zinc-950 min-h-screen pb-14">
         <SessionProvider>
           <Header name={siteData} />
           {children}
