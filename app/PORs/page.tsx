@@ -11,10 +11,7 @@ interface POR {
 }
 
 const PORPage = () => {
-  const [porData, setPORData]: [POR[], Dispatch<SetStateAction<POR[]>>] =
-    useState([{
-      image: null
-    } as unknown as POR]);
+  const [porData, setPORData] = useState<POR[]>([]);
 
   useEffect(() => {
     fetch('/database/por.json')
