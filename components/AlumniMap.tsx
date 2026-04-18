@@ -74,7 +74,7 @@ const MapComponent = () => {
   return (
     <div
       style={{ width: '100%' }}
-      className="flex flex-col items-center gap-10"
+      className="flex flex-col items-center gap-10 pb-16"
     >
       <div style={{ height: '500px', width: '100%' }} className="z-0">
         <div style={{ height: '500px', width: '100%' }} className="z-0">
@@ -167,6 +167,7 @@ const MapComponent = () => {
           </MapContainer>
         </div>
       </div>
+      <div className="h-16" />
     </div>
   );
 };

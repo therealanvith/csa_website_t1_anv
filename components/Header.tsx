@@ -104,26 +104,10 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
               </li>
               <li>
                 <a
-                  href="/opportunities"
+                  href="/resources"
                   className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
                 >
-                  Opportunities
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/about"
-                  className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/POTD"
-                  className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
-                >
-                  POTD
+                  Resources
                 </a>
               </li>
               <li>
@@ -136,6 +120,22 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
               </li>
               <li>
                 <a
+                  href="/POTD"
+                  className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
+                >
+                  POTD
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/opportunities"
+                  className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
+                >
+                  Opportunities
+                </a>
+              </li>
+              <li>
+                <a
                   href="/alumni"
                   className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
                 >
@@ -144,10 +144,10 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
               </li>
               <li>
                 <a
-                  href="/resources"
+                  href="/about"
                   className="text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
                 >
-                  Resources
+                  About
                 </a>
               </li>
             </ul>
@@ -240,29 +240,11 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
                   </li>
                   <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">
                     <a
-                      href="/opportunities"
+                      href="/resources"
                       className="block text-xl font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
                       onClick={toggleMenu}
                     >
-                      Opportunities
-                    </a>
-                  </li>
-                  <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">
-                    <a
-                      href="/about"
-                      className="block text-xl font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
-                      onClick={toggleMenu}
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">
-                    <a
-                      href="/POTD"
-                      className="block text-xl font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
-                      onClick={toggleMenu}
-                    >
-                      POTD
+                      Resources
                     </a>
                   </li>
                   <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">
@@ -276,6 +258,24 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
                   </li>
                   <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">
                     <a
+                      href="/POTD"
+                      className="block text-xl font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
+                      onClick={toggleMenu}
+                    >
+                      POTD
+                    </a>
+                  </li>
+                  <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">
+                    <a
+                      href="/opportunities"
+                      className="block text-xl font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
+                      onClick={toggleMenu}
+                    >
+                      Opportunities
+                    </a>
+                  </li>
+                  <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">
+                    <a
                       href="/alumni"
                       className="block text-xl font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
                       onClick={toggleMenu}
@@ -285,11 +285,11 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
                   </li>
                   <li className="border-b border-zinc-300 dark:border-zinc-700 pb-3">
                     <a
-                      href="/resources"
+                      href="/about"
                       className="block text-xl font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-300 transition-colors duration-200"
                       onClick={toggleMenu}
                     >
-                      Resources
+                      About
                     </a>
                   </li>
                 </ul>

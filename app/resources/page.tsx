@@ -90,7 +90,7 @@ export default function ResourcesPage() {
               >
                 <g
                   xmlns="http://www.w3.org/2000/svg"
-                  clip-path="url(#clip0_1:142)"
+                  clipPath="url(#clip0_1:142)"
                   transform="translate(55, 70)"
                 >
                   <path
@@ -169,7 +169,7 @@ export default function ResourcesPage() {
               >
                 <g
                   xmlns="http://www.w3.org/2000/svg"
-                  clip-path="url(#clip0_1:142)"
+                  clipPath="url(#clip0_1:142)"
                   transform="translate(55, 70)"
                 >
                   <path
